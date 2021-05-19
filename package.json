@@ -1,73 +1,152 @@
 {
-	"name": "vscode-notebook-cell-linenumber",
-	"displayName": "vscode-notebook-cell-linenumber",
-	"description": "",
-	"version": "0.0.1",
-	"enableProposedApi": true,
-	"engines": {
-		"vscode": "1.57.0-insider"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"*",
-		"onNotebook:jupyter-notebook",
-		"onCommand:vscode-notebook-cell-linenumber.helloWorld"
-	],
-	"main": "./dist/extension.js",
-	"contributes": {
-        "configuration": {
-            "type": "object",
-            "properties": {
-                "notebook.cursorPositionLocation": {
-                    "type": "string",
-                    "default": "statusbar",
-                    "enum": [
-                        "statusbar",
-                        "cellstatusbar"
-                    ],
-                    "description": "Displays cell line and column number in cell or window statusbar.",
-                    "scope": "machine"
-                }
-            }
+    "name": "vscode-jupytext",
+    "displayName": "Jupytext for VS Code Notebooks",
+    "description": "Open, edit and execute pain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks",
+    "publisher": "donjayamanne",
+    "version": "0.0.1",
+    "enableProposedApi": true,
+    "preview": true,
+    "engines": {
+        "vscode": "1.57.0-insider"
+    },
+    "license": "BSD-3-Clause",
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#1e415e",
+        "theme": "dark"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:jupyter.openAsPairedNotebook",
+        "onNotebook:jupyter-notebook",
+        "onFileSystem:jupytext"
+    ],
+    "main": "./dist/extension.js",
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": false
         },
-		"commands": [
-			{
-				"command": "vscode-notebook-cell-linenumber.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "yarn run package",
-		"compile": "webpack",
-		"watch": "webpack --watch",
-		"package": "webpack --mode production --devtool hidden-source-map",
-		"test-compile": "tsc -p ./",
-		"test-watch": "tsc -watch -p ./",
-		"pretest": "yarn run test-compile && yarn run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js",
-		"download-api": "vscode-dts dev",
+        "virtualWorkspaces": false
+    },
+    "homepage": "https://github.com/notebookPowerTools/vscode-jupytext",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/notebookPowerTools/vscode-jupytext"
+    },
+    "bugs": {
+        "url": "https://github.com/notebookPowerTools/vscode-jupytext/issues"
+    },
+    "galleryBanner": {
+        "color": "#1e415e",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.57.0-insider"
+    },
+    "keywords": [
+        "python",
+        "notebook",
+        "multi-root ready"
+    ],
+    "categories": [
+        "Programming Languages",
+        "Data Science",
+        "Machine Learning",
+        "Notebooks"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "jupyter.openAsPairedNotebook",
+                "title": "Open as a Jupyter Notebook"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == python"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == r"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == julia"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == fsharp"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == csharp"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == java"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == powershell"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == typescript"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == javascript"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == markdown"
+                },
+                {
+                    "command": "jupyter.openAsPairedNotebook",
+                    "when": "resourceLangId == rust"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "test-compile": "tsc -p ./",
+        "test-watch": "tsc -watch -p ./",
+        "pretest": "yarn run test-compile && yarn run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js",
+        "download-api": "vscode-dts dev",
         "postdownload-api": "vscode-dts main",
         "postinstall": "npm run download-api"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.56.0",
-		"@typescript-eslint/eslint-plugin": "^4.14.1",
-		"@typescript-eslint/parser": "^4.14.1",
-		"eslint": "^7.19.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
-		"ts-loader": "^8.0.14",
-		"typescript": "^4.1.3",
-		"vscode-dts": "^0.3.1",
-		"vscode-test": "^1.5.0",
-		"webpack": "^5.19.0",
-		"webpack-cli": "^4.4.0"
-	}
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.11",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.4",
+        "@types/node": "^12.11.7",
+        "@types/tmp": "^0.2.0",
+        "@types/vscode": "^1.56.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "eslint": "^7.19.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.2.1",
+        "ts-loader": "^8.0.14",
+        "typescript": "^4.1.3",
+        "vscode-dts": "^0.3.1",
+        "vscode-test": "^1.5.0",
+        "webpack": "^5.19.0",
+        "webpack-cli": "^4.4.0"
+    },
+    "dependencies": {
+        "fs-extra": "^10.0.0",
+        "tmp": "^0.2.1"
+    }
 }

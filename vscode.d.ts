@@ -1154,7 +1154,9 @@ declare module 'vscode' {
 
 		/**
 		 * Adds a set of decorations to the text editor. If a set of decorations already exists with
-		 * the given {@link TextEditorDecorationType decoration type}, they will be replaced.
+		 * the given {@link TextEditorDecorationType decoration type}, they will be replaced. If
+		 * `rangesOrOptions` is empty, the existing decorations with the given {@link TextEditorDecorationType decoration type}
+		 * will be removed.
 		 *
 		 * @see {@link window.createTextEditorDecorationType createTextEditorDecorationType}.
 		 *
@@ -1311,6 +1313,15 @@ declare module 'vscode' {
 		 * @returns A new uri which path is joined with the given fragments
 		 */
 		static joinPath(base: Uri, ...pathSegments: string[]): Uri;
+
+		/**
+		 * Create an URI from its component parts
+		 *
+		 * @see {@link Uri.toString}
+		 * @param components The component parts of an Uri.
+		 * @return A new Uri instance.
+		 */
+		static from(components: { scheme: string; authority?: string; path?: string; query?: string; fragment?: string }): Uri;
 
 		/**
 		 * Use the `file` and `parse` factory functions to create new `Uri` objects.
@@ -5993,7 +6004,8 @@ declare module 'vscode' {
 		};
 
 		/**
-		 * A storage utility for secrets.
+		 * A storage utility for secrets. Secrets are persisted across reloads and are independent of the
+		 * current opened {@link workspace.workspaceFolders workspace}.
 		 */
 		readonly secrets: SecretStorage;
 
@@ -10495,7 +10507,7 @@ declare module 'vscode' {
 		export function applyEdit(edit: WorkspaceEdit): Thenable<boolean>;
 
 		/**
-		 * All text documents currently known to the system.
+		 * All text documents currently known to the editor.
 		 */
 		export const textDocuments: ReadonlyArray<TextDocument>;
 
