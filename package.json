@@ -15,9 +15,6 @@
         "color": "#1e415e",
         "theme": "dark"
     },
-    "categories": [
-        "Other"
-    ],
     "activationEvents": [
         "onCommand:jupyter.openAsPairedNotebook",
         "onNotebook:jupyter-notebook",
@@ -37,13 +34,6 @@
     },
     "bugs": {
         "url": "https://github.com/notebookPowerTools/vscode-jupytext/issues"
-    },
-    "galleryBanner": {
-        "color": "#1e415e",
-        "theme": "dark"
-    },
-    "engines": {
-        "vscode": "^1.57.0-insider"
     },
     "keywords": [
         "python",
@@ -132,7 +122,6 @@
         "@types/mocha": "^8.0.4",
         "@types/node": "^12.11.7",
         "@types/tmp": "^0.2.0",
-        "@types/vscode": "^1.56.0",
         "@typescript-eslint/eslint-plugin": "^4.14.1",
         "@typescript-eslint/parser": "^4.14.1",
         "eslint": "^7.19.0",

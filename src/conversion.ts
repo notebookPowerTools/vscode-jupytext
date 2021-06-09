@@ -1,4 +1,4 @@
-import { notebook, NotebookDocument, Uri, window, workspace } from 'vscode';
+import { Uri, window, workspace } from 'vscode';
 import * as path from 'path';
 import { getGlobalCache, getGlobalTempDir, jupytextScheme } from './constants';
 import * as fs from 'fs-extra';
@@ -41,7 +41,7 @@ export async function convertToNotebook(
     let existingMapping = getMappingFor({ script: uri });
     if (
         existingMapping &&
-        notebook.notebookDocuments.find(
+        workspace.notebookDocuments.find(
             (item) => item.uri.fsPath === existingMapping!.virtualIpynb
         )
     ) {
