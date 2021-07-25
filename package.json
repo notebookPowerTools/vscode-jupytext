@@ -1,7 +1,7 @@
 {
     "name": "vscode-jupytext",
     "displayName": "Jupytext for Notebooks",
-    "description": "Open, edit and execute pain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks",
+    "description": "Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks",
     "publisher": "donjayamanne",
     "version": "0.1.0",
     "enableProposedApi": true,
