@@ -16,10 +16,8 @@ A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marke
 * Python (temporary, see `Roadmap`)
 
 # Getting Started
-* Please install VS Code Insiders (stable is not yet supported)
-* Install this extension
-* Launch VS Code with the following command line `code-insiders --enable-proposed-api=donjayamanne.vscode-jupytext`
-* Right click a file and select `Open as a Jupyter Notebook`
+* This extension requires VS Code 1.60.1 or newer
+* Right click a `*.py` file and select `Open as a Jupyter Notebook`
 * Start executing code against Jupyter Kernels, save changes to notebook will result in the corresponding script file getting updated.
 
 
