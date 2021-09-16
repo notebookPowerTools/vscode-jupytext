@@ -17,7 +17,7 @@ A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marke
 
 # Getting Started
 * This extension requires VS Code 1.60.1 or newer
-* Right click a `*.py` file and select `Open as a Jupyter Notebook`
+* Run the `Open as a Jupyter Notebook` from the context menu or editor title menu bar for a `*.py` file
 * Start executing code against Jupyter Kernels, save changes to notebook will result in the corresponding script file getting updated.
 
 
