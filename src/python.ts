@@ -129,11 +129,11 @@ export async function runPythonCommand(cmdArgs: string[]): Promise<string> {
     });
 }
 export async function runJupytext(cmdArgs: string[]): Promise<string> {
-    return runPythonCommand(['python'].concat(cmdArgs));
+    return runPythonCommand(['python3'].concat(cmdArgs));
 }
 async function testPythonCommand(): Promise<boolean> {
     const cmd = [
-        'python',
+        'python3',
         'c',
         'import sys;print(sys.executable);print(sys.version)',
     ];
