@@ -4,10 +4,10 @@
     "description": "Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks",
     "publisher": "donjayamanne",
     "version": "0.1.0",
-    "enableProposedApi": true,
+    "enableProposedApi": false,
     "preview": true,
     "engines": {
-        "vscode": "1.57.0-insider"
+        "vscode": "^1.60.1"
     },
     "license": "BSD-3-Clause",
     "icon": "icon.png",
