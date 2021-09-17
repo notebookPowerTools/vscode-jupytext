@@ -3,7 +3,7 @@
     "displayName": "Jupytext for Notebooks (congyiwu)",
     "description": "Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks.  Soft fork of donjayamanne.vscode-jupytext",
     "publisher": "congyiwu",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "enableProposedApi": false,
     "preview": true,
     "engines": {
