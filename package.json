@@ -1,8 +1,8 @@
 {
     "name": "vscode-jupytext",
-    "displayName": "Jupytext for Notebooks",
-    "description": "Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks",
-    "publisher": "donjayamanne",
+    "displayName": "Jupytext for Notebooks (congyiwu)",
+    "description": "Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks.  Soft fork of donjayamanne.vscode-jupytext",
+    "publisher": "congyiwu",
     "version": "0.1.0",
     "enableProposedApi": false,
     "preview": true,
@@ -25,13 +25,13 @@
         },
         "virtualWorkspaces": false
     },
-    "homepage": "https://github.com/notebookPowerTools/vscode-jupytext",
+    "homepage": "https://github.com/congyiwu/vscode-jupytext",
     "repository": {
         "type": "git",
-        "url": "https://github.com/notebookPowerTools/vscode-jupytext"
+        "url": "https://github.com/congyiwu/vscode-jupytext"
     },
     "bugs": {
-        "url": "https://github.com/notebookPowerTools/vscode-jupytext/issues"
+        "url": "https://github.com/congyiwu/vscode-jupytext/issues"
     },
     "keywords": [
         "python",

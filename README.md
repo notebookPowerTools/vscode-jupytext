@@ -1,3 +1,5 @@
+# This (https://github.com/congyiwu/vscode-jupytext) is a soft fork of https://github.com/notebookPowerTools/vscode-jupytext with some fixes that I intend to send upstream
+
 A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/items?itemName=donjayamanne.vscode-jupytext) that provides ability to open and execute script files as Jupyter Notebooks.
 
 ## Like the UI of Jupyter Notebooks, but prefer to use plain text files, this is the extension for you.
