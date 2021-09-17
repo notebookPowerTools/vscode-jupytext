@@ -16,9 +16,7 @@
         "theme": "dark"
     },
     "activationEvents": [
-        "onCommand:jupyter.openAsPairedNotebook",
-        "onNotebook:jupyter-notebook",
-        "onFileSystem:jupytext"
+        "onStartupFinished"
     ],
     "main": "./dist/extension.js",
     "capabilities": {
@@ -57,47 +55,26 @@
             "explorer/context": [
                 {
                     "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == python"
-                },
+                    "when": "resourceLangId in vscode-jupytext.resourceLangIds"
+                }
+            ],
+            "editor/context": [
                 {
                     "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == r"
-                },
+                    "when": "resourceLangId in vscode-jupytext.resourceLangIds"
+                }
+            ],
+            "editor/title": [
                 {
                     "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == julia"
-                },
+                    "when": "resourceLangId in vscode-jupytext.resourceLangIds",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title/context": [
                 {
                     "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == fsharp"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == csharp"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == java"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == powershell"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == typescript"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == javascript"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == markdown"
-                },
-                {
-                    "command": "jupyter.openAsPairedNotebook",
-                    "when": "resourceLangId == rust"
+                    "when": "resourceLangId in vscode-jupytext.resourceLangIds"
                 }
             ]
         }
