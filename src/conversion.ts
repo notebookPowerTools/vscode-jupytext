@@ -90,6 +90,8 @@ export async function convertFromNotebookToRawContent(
         'jupytext',
         '--to',
         `${extension.substring(1)}:percent`,
+        '--opt',
+        'custom_cell_magics=kql',
         uri.fsPath,
         '--output',
         '-',
