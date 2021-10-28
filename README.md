@@ -13,7 +13,7 @@ A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marke
 # Requirements
 * Jupyter Extension
 * VS Code Insiders (VS Code Stable is not yet supported)
-* Python (temporary, see `Roadmap`)
+* `Python 3.8` or higher (temporary, see `Roadmap`)
 
 # Getting Started
 * Please install VS Code Insiders (stable is not yet supported)
