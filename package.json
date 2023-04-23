@@ -51,6 +51,17 @@
                 "title": "Open as a Jupyter Notebook"
             }
         ],
+        "configuration": {
+            "title": "Jupytext",
+            "properties": {
+                "jupytext.languages": {
+                    "type": "string",
+                    "editPresentation": "multilineText",
+                    "default": "R\nbash\nc++\nclojure\ncoconut\ncsharp\nfsharp\ngroovy\nidl\njava\njavascript\njulia\nmatlab\npowershell\npython\nq\nrobotframework\nrust\nsage\nscala\nscheme\nsos\ntypescript",
+                    "markdownDescription": "The **language names** *(one per line)* that can be opened with this extension\n\nFor example if you have `.ts` files and you do not want them to have the *Open as a Jupyter Notebook* thingy to be available on these files, remove `typescript` from this list "
+                }
+            }
+        },
         "menus": {
             "explorer/context": [
                 {
